@@ -6,8 +6,8 @@ target 'Weather App' do
   use_frameworks!
 
   # Pods for Weather App
-#pod 'AFNetworking', '~> 4.0'
-#pod 'SVProgressHUD'
+pod 'AFNetworking', '~> 4.0'
+pod 'SVProgressHUD'
 
 
 end
