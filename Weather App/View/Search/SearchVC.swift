@@ -17,6 +17,3 @@ class SearchVC: BaseVC<SearchView> {
     }
 }
 
-extension SearchVC: UISearchBarDelegate {
-    
-}

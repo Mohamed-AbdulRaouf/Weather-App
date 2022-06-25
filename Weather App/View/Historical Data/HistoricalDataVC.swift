@@ -14,11 +14,3 @@ class HistoricalDataVC: BaseVC<HistoricalDataView> {
         mainView.delegate = self
     }
 }
-
-extension HistoricalDataVC: HistoricalDataViewDelegate {
-    func backToView() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-}

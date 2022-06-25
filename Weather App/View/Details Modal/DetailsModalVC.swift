@@ -14,9 +14,3 @@ class DetailsModalVC: BaseVC<DetailsModalView> {
         mainView.delegate = self
     }
 }
-
-extension DetailsModalVC: DetailsModalViewDelegate {
-    func closeView() {
-        self.dismiss(animated: true, completion: nil)
-    }
-}
