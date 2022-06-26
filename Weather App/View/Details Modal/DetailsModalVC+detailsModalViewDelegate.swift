@@ -8,6 +8,7 @@
 import UIKit
 
 extension DetailsModalVC: DetailsModalViewDelegate {
+    
     func closeView() {
         self.dismiss(animated: true, completion: nil)
     }

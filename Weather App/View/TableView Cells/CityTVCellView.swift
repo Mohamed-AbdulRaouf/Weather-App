@@ -8,7 +8,7 @@
 import UIKit
 
 @objc protocol CityCellDelegate: AnyObject {
-    func selectCity()
+    func selectCity(_ sender: UIButton)
 }
 
 class CityTVCellView: UITableViewCell {

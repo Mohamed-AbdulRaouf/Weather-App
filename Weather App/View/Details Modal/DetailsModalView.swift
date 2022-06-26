@@ -71,7 +71,7 @@ class DetailsModalView: BaseView {
     
     lazy var descriptionValueLbl: UILabel = {
         let label = UILabel()
-        label.text = "Description value"
+        label.text = ""
         return label
     }()
     
@@ -80,6 +80,7 @@ class DetailsModalView: BaseView {
         stack.axis = .horizontal
         stack.alignment = .leading
         stack.distribution = .fillEqually
+        stack.spacing = 25
         return stack
     }()
     
@@ -91,7 +92,7 @@ class DetailsModalView: BaseView {
     
     lazy var temperatureValueLbl: UILabel = {
         let label = UILabel()
-        label.text = "temperature value"
+        label.text = ""
         return label
     }()
     
@@ -100,6 +101,7 @@ class DetailsModalView: BaseView {
         stack.axis = .horizontal
         stack.alignment = .leading
         stack.distribution = .fillEqually
+        stack.spacing = 25
         return stack
     }()
     
@@ -111,7 +113,7 @@ class DetailsModalView: BaseView {
     
     lazy var humidityValueLbl: UILabel = {
         let label = UILabel()
-        label.text = "humidity value"
+        label.text = ""
         return label
     }()
     
@@ -119,7 +121,8 @@ class DetailsModalView: BaseView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .leading
-        stack.distribution = .fillEqually
+        stack.distribution = .equalCentering
+        stack.spacing = 25
         return stack
     }()
     
@@ -131,15 +134,16 @@ class DetailsModalView: BaseView {
     
     lazy var windspeedValueLbl: UILabel = {
         let label = UILabel()
-        label.text = "Windspeed value"
+        label.text = ""
         return label
     }()
     
     lazy var windspeedStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
-        stack.alignment = .leading
-        stack.distribution = .fillEqually
+        stack.alignment = .center
+        stack.distribution = .equalCentering
+        stack.spacing = 25
         return stack
     }()
     
@@ -155,6 +159,8 @@ class DetailsModalView: BaseView {
     lazy var bottomLbl: UILabel = {
         let label = UILabel()
         label.text = "Weather information for London received on"
+        label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
@@ -219,7 +225,7 @@ class DetailsModalView: BaseView {
         mainDetailsStack.anchor(.centerX(centerPopupView.centerXAnchor, constant: 0),
                                 .centerY(centerPopupView.centerYAnchor, constant: 0))
         bottomLbl.anchor(.bottom(containerView.bottomAnchor, constant: 40),
-                         .centerX(containerView.centerXAnchor, constant: 0),
-                         .height(18))
+                         .leading(containerView.leadingAnchor, constant: 20),
+                         .trailing(containerView.trailingAnchor, constant: 20))
     }
 }

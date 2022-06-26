@@ -48,6 +48,9 @@ class HistoricalDataView: BaseView {
     lazy var HistoricalTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         return tableView
     }()
     
@@ -82,10 +85,9 @@ class HistoricalDataView: BaseView {
                          .centerX(containerView.centerXAnchor, constant: 0))
         headerLeftBtn.anchor(.top(headerLbl.topAnchor, constant: -2),
                              .trailing(containerView.trailingAnchor, constant: 0))
-        
         HistoricalTableView.anchor(.top(headerLbl.bottomAnchor, constant: 53),
                                    .leading(containerView.leadingAnchor, constant: 16),
                                    .trailing(containerView.trailingAnchor, constant: 16),
-                                   .height(350))
+                                   .bottom(containerView.bottomAnchor, constant: 0))
     }
 }

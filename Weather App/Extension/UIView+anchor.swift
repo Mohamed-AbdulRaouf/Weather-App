@@ -23,14 +23,14 @@ public enum Anchor {
 }
 
 extension UIView {
-
+    
     @discardableResult
     func anchor(_ anchors: Anchor...) -> AnchoredConstraints {
-
+        
         translatesAutoresizingMaskIntoConstraints = false
-
+        
         var anchoredConstraints = AnchoredConstraints()
-
+        
         anchors.forEach { anchor in
             switch anchor {
             case .top(let anchor, let constant):
@@ -55,7 +55,7 @@ extension UIView {
                 }
             }
         }
-
+        
         [anchoredConstraints.top,
          anchoredConstraints.leading,
          anchoredConstraints.bottom,
@@ -67,7 +67,6 @@ extension UIView {
         ].forEach {
             $0?.isActive = true
         }
-
         return anchoredConstraints
     }
 }

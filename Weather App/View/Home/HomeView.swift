@@ -9,7 +9,7 @@ import UIKit
 
 @objc protocol HomeViewDelegate: AnyObject {
     func addNewCityBtn()
-    func didSelectCity()
+    func didSelectCity(cityName: String)
 }
 
 class HomeView: BaseView {
